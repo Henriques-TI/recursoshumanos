@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core" 
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+            <title>Funcionario</title>
+
+             <h:outputStylesheet name="stilo.css" library="css"/>
+         
+        </h:head>
+ <h:body>
+        <header class="topo">
+            Topo
+        </header>
+        <nav class="menu">Menu
+            
+             <h:link value="Funcionarios " outcome="funcionaro"/>
+            <h:form>
+                <h:commandButton value="Departamento" action="departamento" />
+                <h:commandButton value="Funcionario" action="funcionario" />
+            </h:form>
+
+        </nav>
+        <section class="banner">Banner</section>
+        <section class="conteudo">Conteúdo
+            
+            <h:form styleClass="form-azul">
+            <h:panelGrid columns="2">
+                
+                <h:outputLabel value="Nome" />
+                <h:inputText value="#{funcionarioBean.funcionario.nome}" />
+                
+             <h:outputLabel value="Email" />
+                <h:inputText value="#{funcionariooBean.funcionarioo.email}" />   
+   
+
+                <h:outputLabel value="Cargo" />
+                <h:inputText value="#{funcionarioBean.funcionario.cargo}" />
+
+                <h:outputLabel value="Endereco" />
+                <h:inputText value="#{funcionarioBean.funcionario.endereco}" />
+                
+                <h:commandButton value="Salvar"
+                                 action="#{funcionarioBean.guardarDados}"
+                                 styleClass="botao-verde"/>
+            </h:panelGrid>
+
+        </h:form>
+
+        </section>
+       <footer class="rodape">Rodapé</footer>
+    </h:body>
+
+

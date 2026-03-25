@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Gestão</title>
+        
+        
+        <h:outputStylesheet name="stilo.css" library="css"/>
+   
+    </head>
+    <body>
+       <h:body>
+        <header class="topo">
+            Topo
+        </header>
+        <nav class="menu">Menu
+
+            <h:link value="Departamentos " outcome="departamento"/> 
+            <h:link value="Funcionarios " outcome="funcionario"/> 
+            <h:form>
+                <h:commandButton value="Departamento" action="departamento" />
+                <h:commandButton value="Funcionario" action="funcionario" />
+            </h:form>
+
+        </nav>
+        <section class="banner">Banner</section>
+        <section class="conteudo">Conteúdo
+            <h:form styleClass="form-azul">
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Nome" />
+                    <a href="../../../../sistema_t/src/main/webapp/index.xhtml"></a>
+                    <h:inputText value="#{departamentoBean.departamento.nome}" />
+
+                    <h:outputLabel value="Descricao" />
+                    <h:inputText value="#{departamentoBean.departamento.descricao}" />
+
+                    <h:commandButton value="Salvar"
+                                     action="#{departamentoBean.guardarDados}"
+                                     styleClass="botao-branco"/>
+                </h:panelGrid>
+
+            </h:form>
+
+
+        </section>
+        <footer class="rodape">Rodapé</footer>
+    </body>
+</html>

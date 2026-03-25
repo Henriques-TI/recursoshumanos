@@ -1,0 +1,51 @@
+form-azul {
+                background-color: #D3D3D3;
+                padding: 30px;
+                width: 350px;
+                margin: 70px centro;
+                border-radius: 14px;
+                color: white;
+            }
+
+            .botao-verde {
+                background-color: seagreen;
+                color: #1d1b2a;
+                border: none;
+                padding: 50px 20px;
+                border-radius: 30px;
+            }
+
+            body{
+                display:grid;
+                grid-template-rows:50px auto auto 50px;
+                grid-template-columns: 1fr 4fr;
+            }
+
+            .topo{
+                background-color: #a2a2A2;
+                grid-row: 1/2;
+                grid-column: 1/3;
+
+            }
+
+            .banner{
+                background: #D3D3D3;
+                grid-row: 2/3;
+                grid-column: 2/3;
+            }
+            .menu{
+                background-color: #D3D3D3;
+                grid-row: 2/5;
+                grid-column: 1/2;
+            }
+            
+            .conteudo {
+                background-color: #D3D3D2;
+                grid-row: 2/5
+                grid-column: 1/3;
+            }
+            .rodape{
+                background-color: #b4b4b4;
+                grid-row: 5/5;
+                grid-column: 2/3;
+            }

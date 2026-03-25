@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+      
+    <h:head>
+        <h:outputStylesheet name="stilo.css" library="css"/>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <header class="topo">Topo</header>
+        <nav class="menu">
+            <h:link outcome="index" value="voltar a pagina principal"/>
+        
+        
+        </nav>
+        <section class="banner">Banner</section>
+        <section class="conteudo">
+            <h:dataTable id="Listdepartamentos" 
+                     value="#{departamentoBean.departamentos}" 
+                     var="item">
+
+            <h:column>
+                <f:facet name="header">ID   </f:facet>
+                <h:outputText value="#{item.id}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Nome </f:facet>
+                <h:outputText value="#{item.nome}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Descricao  </f:facet>
+                <h:outputText value="#{item.descricao}" />
+            </h:column>
+
+        </h:dataTable>
+        <h2>Gestão de Departamentos</h2>
+        <ui:repeat value="#{departamentoBean.departamentos}" var="dp">
+            #{dp.id}
+            #{dp.nome}
+            #{dp.descricao}
+        </ui:repeat>
+        
+        
+        </section>
+        <footer class="rodape">Rodapé</footer>
+        
+       
+       
+    </h:body>
+</html>

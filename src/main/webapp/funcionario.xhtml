@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+        <h:outputStylesheet name="stilo.css" library="css"/>
+        <title>Gestão de Funcionarios</title>
+    </h:head>
+    <h:body>
+        <header class="topo"></header>
+        <nav class="menu">
+            <h:link outcome="index" value="voltar a pagina principal"/>
+        
+        
+        </nav>
+        <section class="banner"></section>
+        <section class="conteudo">
+            <h:dataTable id="Listfuncionarios" 
+                     value="#{funcionarioBean.funcionarios}" 
+                     var="item">
+
+            <h:column>
+                <f:facet name="header">ID </f:facet>
+                <h:outputText value="#{item.id}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Nome </f:facet>
+                <h:outputText value="#{item.nome}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Endereco  </f:facet>
+                <h:outputText value="#{item.endereco}" />
+            </h:column>
+                <h:column>
+                    <f:facet name="header">Cargo</f:facet>
+                      <h:outputText value="#{item.cargo}" />
+                </h:column>
+                
+                <h:column>
+                <f:facet name="header">Email</f:facet>
+                <h:outputText value="#{item.email}" />
+            </h:column>
+
+        </h:dataTable>
+        
+        
+        
+        
+        </section>
+        <footer class="rodape"> </footer>
+        
+    </h:body>
+</html>
