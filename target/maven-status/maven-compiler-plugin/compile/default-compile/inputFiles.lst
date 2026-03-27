@@ -1,0 +1,10 @@
+/app/src/main/java/modelo/Funcionario.java
+/app/src/main/java/bdutil/Conexao.java
+/app/src/main/java/dao/DepartamentoDAO.java
+/app/src/main/java/dao/FuncionarioDAO.java
+/app/src/main/java/modelo/Departamento.java
+/app/src/main/java/dao/ResponsavelBuscaAlunoDAO.java
+/app/src/main/java/controller/DepartamentoBean.java
+/app/src/main/java/modelo/ResponsavelBuscaAluno.java
+/app/src/main/java/controller/FuncionarioBean.java
+/app/src/main/java/controller/NavegacaoBean.java
