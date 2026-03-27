@@ -1,0 +1,13 @@
+target/
+*.class
+.nb-gradle/
+build/
+nbproject/private/
+nosync/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.maven-docker-ignore
+.DS_Store
