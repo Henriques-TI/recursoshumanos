@@ -13,10 +13,10 @@ import modelo.Departamento;
 public class DepartamentoDAO {
 
     private static final String INSERT_SQL = "INSERT INTO departamentos (nome, descricao)VALUES (?, ?)";
-    private static final String SELECT_BY_ID = "SELECT id_departamento, nome, descricao, FROM departamentos WHERE id_departamento = ?";
+    private static final String SELECT_BY_ID = "SELECT id_departamento, nome, descricao FROM departamentos WHERE id_departamento = ?";
     private static final String SELECT_ALL = "SELECT * FROM departamentos";
     private static final String DELETE_SQL = "DELETE FROM departamentos WHERE id_departamento = ?";
-    private static final String UPDATE_SQL = "UPDATE departamentos SET nome = ?, descricao = ?, WHERE id_departamento = ?";
+    private static final String UPDATE_SQL = "UPDATE departamentos SET nome = ?, descricao = ? WHERE id_departamento = ?";
 
     public void insertDepartamento(Departamento departamento) {
         try (Connection connection = Conexao.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_SQL)) {
@@ -38,7 +38,7 @@ public class DepartamentoDAO {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 int id_departamento = rs.getInt("id_departamento");
-                String name = rs.getString("name");
+                String name = rs.getString("nome");
                 String descricao = rs.getString("descricao");
                 departamento = new Departamento(id_departamento, name, descricao);
             }

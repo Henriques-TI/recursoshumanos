@@ -44,7 +44,7 @@ public class FuncionarioDAO {
                 String email = rs.getString("email");
                 String cargo = rs.getString("cargo");
                 String endereco = rs.getString("endereco");
-                int id_funcionario = 0;
+                int id_funcionario = rs.getInt("id_funcionario");
                 funcionario = new Funcionario(id_funcionario, name, email, cargo, endereco);
             }
         } catch (SQLException e) {

@@ -1,0 +1,10 @@
+bdutil/Conexao.class
+controller/NavegacaoBean.class
+dao/DepartamentoDAO.class
+dao/FuncionarioDAO.class
+controller/FuncionarioBean.class
+controller/DepartamentoBean.class
+modelo/Funcionario.class
+modelo/ResponsavelBuscaAluno.class
+modelo/Departamento.class
+dao/ResponsavelBuscaAlunoDAO.class

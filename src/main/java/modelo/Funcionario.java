@@ -44,7 +44,7 @@ public class Funcionario {
       return nome;
       }
       
-      public void setName (String nome){
+      public void setNome (String nome){
       this.nome = nome;
       }
        
